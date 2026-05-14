@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ธนภัทร พิลาดี - Portfolio</title>
+    <title>ธนภัทร พิลาดี - Medieval Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <div class="cursor-aura" id="cursorAura"></div>
+    <div class="ember-field" id="emberField" aria-hidden="true"></div>
+
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Rayzxls</div>
+        <div class="container nav-inner">
+            <a class="nav-brand" href="#home" aria-label="Rayzxls home">
+                <span class="brand-sigil">R</span>
+                <span>Rayzxls</span>
+            </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -18,138 +26,150 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="stars"></div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="animate-title">ธนภัทร พิลาดี</h1>
-                <p class="subtitle">Junior Developer | Code Enthusiast | Gamer</p>
-                <p class="hero-description">สวัสดี ผมเป็น Junior Dev ผมรักการเขียน Code ผมรักการเล่นเกม</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">ดูโปรเจกต์</a>
-                    <a href="#contact" class="btn btn-secondary">ติดต่อฉัน</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">เกี่ยวกับตัวเอง</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>ผมเป็น Junior Developer ที่มีความหลงใหลในการเขียนโค้ด และแก้ไขปัญหาด้วยเทคโนโลยี นอกจากการพัฒนา web application แล้ว ผมยังชอบการเล่นเกมและสำรวจเทคโนโลยีใหม่ๆ</p>
-                    <p>ผมตั้งใจจะพัฒนาทักษะของตัวเองให้กลายเป็น Developer มือโปรในอนาคต ด้วยการเรียนรู้อย่างต่อเนื่องและการสร้างโปรเจกต์ที่มีคุณค่า</p>
-                </div>
-                <div class="contact-card">
-                    <h3>ติดต่อสัมผัส</h3>
-                    <ul class="contact-list">
-                        <li><span class="icon">📧</span> thanapatpilabee@gmail.com</li>
-                        <li><span class="icon">📱</span> 094-081-7471</li>
-                        <li><span class="icon">💻</span> <a href="https://github.com/Rayzxls" target="_blank">github.com/Rayzxls</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">โปรเจกต์</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Present</h3>
-                        <span class="project-badge">Featured</span>
+    <main>
+        <section id="home" class="hero">
+            <div class="castle-silhouette" aria-hidden="true"></div>
+            <div class="container hero-grid">
+                <div class="hero-text reveal">
+                    <h1 class="animate-title">ธนภัทร พิลาดี</h1>
+                    <p class="subtitle">Junior Developer | Code Enthusiast | Gamer</p>
+                    <p class="hero-description">
+                        สวัสดีครับ ผมคือ Rayzxls นักพัฒนา Junior Developer ที่ชอบสร้างเว็บ แก้ปัญหาด้วยโค้ด และหลงใหลบรรยากาศเกมแฟนตาซีเข้ม ๆ
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">ดูโปรเจกต์</a>
+                        <a href="#contact" class="btn btn-secondary">ติดต่อฉัน</a>
                     </div>
-                    <p class="project-description">โปรเจกต์พิเศษที่ประกอบไปด้วย front-end และ back-end technologies</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">JavaScript</span>
+                </div>
+
+                <div class="war-banner reveal" aria-label="Medieval developer crest">
+                    <div class="banner-top">CODE ORDER</div>
+                    <div class="crest">
+                        <span>&lt;/&gt;</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Rayzxls/Present" target="_blank" class="project-link">View on GitHub</a>
+                    <div class="banner-lines">
+                        <span>Frontend</span>
+                        <span>Backend</span>
+                        <span>Game Mindset</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">ทักษะ</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Front-End</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">Vue</span>
-                        <span class="skill-item">HTML</span>
-                        <span class="skill-item">CSS</span>
-                        <span class="skill-item">JavaScript</span>
+        <section id="about" class="about section-band">
+            <div class="container">
+                <h2 class="section-title reveal">เกี่ยวกับตัวเอง</h2>
+                <div class="about-content">
+                    <div class="about-text reveal">
+                        <p>
+                            ผมเป็น Junior Developer ที่มีความหลงใหลในการเขียนโค้ดและการแก้ปัญหาด้วยเทคโนโลยี ชอบทดลองเครื่องมือใหม่ ๆ และสนุกกับการเปลี่ยนไอเดียให้กลายเป็นผลงานที่ใช้งานได้จริง
+                        </p>
+                        <p>
+                            เป้าหมายของผมคือพัฒนาทักษะให้แข็งแรงขึ้นเรื่อย ๆ ทั้งด้าน Front-End, Back-End และการออกแบบประสบการณ์ผู้ใช้ เพื่อเติบโตเป็น Developer ที่สร้างงานคุณภาพได้อย่างมั่นใจ
+                        </p>
                     </div>
+                    <aside class="contact-card reveal">
+                        <h3>ตราประจำกิลด์</h3>
+                        <ul class="contact-list">
+                            <li><span class="icon">MAIL</span><a href="mailto:thanapatpilabee@gmail.com">thanapatpilabee@gmail.com</a></li>
+                            <li><span class="icon">CALL</span><a href="tel:094-081-7471">094-081-7471</a></li>
+                            <li><span class="icon">GIT</span><a href="https://github.com/Rayzxls" target="_blank" rel="noreferrer">github.com/Rayzxls</a></li>
+                        </ul>
+                    </aside>
                 </div>
+            </div>
+        </section>
 
-                <div class="skill-category">
-                    <h3>Back-End</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Node.js</span>
-                    </div>
+        <section id="projects" class="projects section-band">
+            <div class="container">
+                <h2 class="section-title reveal">โปรเจกต์</h2>
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-header">
+                            <h3>Present</h3>
+                            <span class="project-badge">Featured Quest</span>
+                        </div>
+                        <p class="project-description">
+                            โปรเจกต์พิเศษที่รวมงานฝั่ง front-end และ back-end technologies ใช้เป็นสนามฝึกการวางโครงสร้างและการพัฒนาเว็บแอปพลิเคชัน
+                        </p>
+                        <div class="project-tech" aria-label="Project technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/Rayzxls/Present" target="_blank" rel="noreferrer" class="project-link">View on GitHub</a>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Docker</span>
+        <section id="skills" class="skills section-band">
+            <div class="container">
+                <h2 class="section-title reveal">ทักษะ</h2>
+                <div class="skills-grid">
+                    <article class="skill-category reveal">
+                        <h3>Front-End</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">React</span>
+                            <span class="skill-item">Vue</span>
+                            <span class="skill-item">HTML</span>
+                            <span class="skill-item">CSS</span>
+                            <span class="skill-item">JavaScript</span>
+                        </div>
+                    </article>
+                    <article class="skill-category reveal">
+                        <h3>Back-End</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">Node.js</span>
+                        </div>
+                    </article>
+                    <article class="skill-category reveal">
+                        <h3>Tools</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">Docker</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-band">
+            <div class="container">
+                <h2 class="section-title reveal">ติดต่อฉัน</h2>
+                <div class="contact-wrapper reveal">
+                    <p class="contact-subtitle">ถ้าต้องการคุยเรื่องงาน โปรเจกต์ หรือไอเดียใหม่ ๆ ส่งสารมาหาได้เลย</p>
+                    <div class="contact-methods">
+                        <a href="mailto:thanapatpilabee@gmail.com" class="contact-method">
+                            <span class="method-icon">MAIL</span>
+                            <span>Email</span>
+                        </a>
+                        <a href="tel:094-081-7471" class="contact-method">
+                            <span class="method-icon">CALL</span>
+                            <span>Phone</span>
+                        </a>
+                        <a href="https://github.com/Rayzxls" target="_blank" rel="noreferrer" class="contact-method">
+                            <span class="method-icon">GIT</span>
+                            <span>GitHub</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">ติดต่อฉัน</h2>
-            <div class="contact-wrapper">
-                <p class="contact-subtitle">มีอะไรที่ต้องการติดต่อฉัน? ส่งข้อความมาได้เลย!</p>
-                <div class="contact-methods">
-                    <a href="mailto:thanapatpilabee@gmail.com" class="contact-method">
-                        <span class="method-icon">📧</span>
-                        <span>Email</span>
-                    </a>
-                    <a href="tel:094-081-7471" class="contact-method">
-                        <span class="method-icon">📱</span>
-                        <span>Phone</span>
-                    </a>
-                    <a href="https://github.com/Rayzxls" target="_blank" class="contact-method">
-                        <span class="method-icon">💻</span>
-                        <span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 ธนภัทร พิลาดี | All rights reserved</p>
-            <p>Made with 💝 by Rayzxls</p>
+            <p>&copy; 2026 ธนภัทร พิลาดี | All rights reserved</p>
+            <p>Forged by Rayzxls</p>
         </div>
     </footer>
 
